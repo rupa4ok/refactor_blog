@@ -11,10 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainController@index')->name('main');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/cabinet', 'HomeController@index')->name('cabinet');
+
+Route::group(
+	[
+		'prefix' => 'cabinet',
+		'as' => 'cabinet.',
+		'namespace' => 'Cabinet',
+		'middleware' => ['auth'],
+	],
+	function () {
+		Route::get('/', 'CabinetController@index')->name('cabinet');
+		
+		Route::group(['prefix' => 'profile', 'as' => 'profile.'], function () {
+			Route::get('/', 'ProfileController@index')->name('home');
+			Route::get('/edit', 'ProfileController@edit')->name('edit');
+			Route::put('/update', 'ProfileController@update')->name('update');
+		});
+	}
+);

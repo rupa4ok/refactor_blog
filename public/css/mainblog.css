@@ -1,0 +1,124 @@
+p{
+	padding:7px;
+}
+
+
+.categories-header{
+text-align: center;
+font-size: 18px;
+border-bottom: 1px solid #000;
+}
+
+.archive-page-title{
+	font-size: 18px;
+	display: inline-block;
+	letter-spacing:2px;
+}
+
+.post_count{ display: inline-block;
+letter-spacing:2px;; float: right; padding-right: 10px; }
+
+.main{
+	width: 750px;
+	background: #fff;
+	transition:all 0.3s ease;
+	margin-bottom:22px;
+}
+
+.content{
+
+position: relative; top: 111px;
+
+}
+
+.article-title{
+text-align: center;
+
+position:relative; top:100px;
+
+
+}
+
+.article-title h2{
+color:#fff;
+font-size: 35px;
+
+
+
+}
+
+.more-links{
+	text-align: center;
+
+position:relative; top:115px;
+}
+
+
+.categories-links{
+text-align: center;
+
+position:relative; top:118px;
+}
+
+.welcome-author{
+text-align: center;
+
+position:relative; top:118px;
+
+}
+
+
+.categories-links a{
+color:#ebebeb;
+font-size:16px;
+}
+
+.main li a{
+    position: relative;
+    top: 60px;
+    padding: 12px 23px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+
+
+.article-images{
+	width: 749px;
+	height: 422px;
+	box-shadow: inset 0 0 1300px  30px #000;
+}
+
+
+.fulltext{
+ padding: 10px;
+
+
+}
+
+.title-position{
+ position: relative; top: 315px;
+ padding: 0 10px; }
+
+
+ .title-position h1 {
+ color:#FFF;
+ font-size: 48px;
+  }
+
+
+  .title-position div {
+ float:left; color:#ebebeb;
+ font-size: 16px;
+ padding: 0 7px;
+  }
+
+
+  .title-position div  a {
+   color:#ebebeb;
+ font-size: 16px;
+  }

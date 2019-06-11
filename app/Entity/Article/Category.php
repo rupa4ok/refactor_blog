@@ -13,5 +13,4 @@ class Category extends Model
 	public $timestamps = false;
 	public $forceDeleting = true;
 	protected $fillable = ['name', 'slug', 'parent_id'];
-	
 }

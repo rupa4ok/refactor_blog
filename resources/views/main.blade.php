@@ -45,7 +45,7 @@
                         <div class="row">
                             <ul>
                                 @foreach ($articles as $article)
-                                    <li><a href="">{{ $article->name }}</a></li>
+                                    <li><a href="">{{ $article->title }}</a></li>
                                 @endforeach
                             </ul>
                         </div>

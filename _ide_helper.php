@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.21 on 2019-06-07 12:09:02.
+ * Generated for Laravel 5.8.21 on 2019-06-13 07:01:18.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14543,6 +14543,137 @@ namespace Illuminate\Support {
  
 }
 
+namespace Eusonlito\LaravelMeta { 
+
+    /**
+     * 
+     *
+     */ 
+    class Facade {
+        
+        /**
+         * 
+         *
+         * @param array $config = []
+         * @return object 
+         * @static 
+         */ 
+        public static function getInstance($config = array())
+        {
+                        return \Eusonlito\LaravelMeta\Meta::getInstance($config);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $config = []
+         * @return \Eusonlito\LaravelMeta\this 
+         * @static 
+         */ 
+        public static function setConfig($config = array())
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->setConfig($config);
+        }
+        
+        /**
+         * 
+         *
+         * @param string|null $title = null
+         * @return string 
+         * @static 
+         */ 
+        public static function title($title = null)
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->title($title);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $key
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function set($key, $value)
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->set($key, $value);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $key
+         * @return void 
+         * @static 
+         */ 
+        public static function remove($key)
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        $instance->remove($key);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $key
+         * @param string|array $default = ''
+         * @return string|array 
+         * @static 
+         */ 
+        public static function get($key, $default = '')
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->get($key, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @param string|array $default
+         * @return array 
+         * @static 
+         */ 
+        public static function getImage($default)
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->getImage($default);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $key
+         * @param string|array $default = ''
+         * @return string 
+         * @static 
+         */ 
+        public static function tag($key, $default = '')
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->tag($key, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $keys = []
+         * @return string 
+         * @static 
+         */ 
+        public static function tags($keys = array())
+        {
+                        /** @var \Eusonlito\LaravelMeta\Meta $instance */
+                        return $instance->tags($keys);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17195,6 +17326,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Meta extends \Eusonlito\LaravelMeta\Facade {}
  
 }
 

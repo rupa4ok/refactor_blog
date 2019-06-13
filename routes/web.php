@@ -56,6 +56,7 @@ Route::group(
 		'as' => 'category.',
 	],
 	function () {
-		Route::get('news/{slug}', 'CategoryController@index')->name('index');
+		Route::get('{slug}', 'MainController@show')->name('show');
 	}
 );
+

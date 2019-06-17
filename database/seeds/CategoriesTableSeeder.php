@@ -13,7 +13,7 @@ class CategoriesTableSeeder extends Seeder
 	public function run()
 	{
 		factory(Category::class, 3)->create()->each(function(Category $category) {
-			$counts = [0, random_int(1, 3)];
+			$counts = [2, random_int(2, 6)];
 			$category->children()->saveMany(factory(Category::class, $counts[array_rand($counts)])
 				->create());
 		});

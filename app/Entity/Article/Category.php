@@ -13,4 +13,14 @@ class Category extends Model
 	public $timestamps = false;
 	public $forceDeleting = true;
 	protected $fillable = ['name', 'slug', 'parent_id'];
+	
+	public function getRouteKey()
+	{
+		return $this->id . '-' . 'slug';
+	}
+	
+	public function getRouteKeyName()
+	{
+		return 'slug';
+	}
 }

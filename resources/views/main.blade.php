@@ -14,7 +14,7 @@
                         <div class="row">
                             <ul>
                                 @foreach ($categories as $category)
-                                    <li><a href="{{ route('category.index', $category->slug) }}">{{ $category->name }}</a></li>
+                                    <li><a href="{{ route('category.index', $category) }}">{{ $category->name }}</a></li>
                                 @endforeach
                             </ul>
                         </div>

@@ -15,7 +15,17 @@ Route::get('/', 'MainController@index')->name('main');
 
 Auth::routes();
 
-Route::get('/cabinet', 'HomeController@index')->name('cabinet');
+Route::group(
+	[
+		'prefix' => 'cabinet',
+		'as' => 'cabinet.',
+		'namespace' => 'Cabinet',
+		'middleware' => ['auth'],
+	],
+	function () {
+		Route::get('/', 'CabinetController@index')->name('cabinet');
+	}
+);
 
 Route::group(
 	[
@@ -46,6 +56,7 @@ Route::group(
 		'as' => 'category.',
 	],
 	function () {
-		Route::get('{slug}', 'CategoryController@index')->name('index');
+		Route::get('{slug}', 'MainController@show')->name('show');
 	}
 );
+

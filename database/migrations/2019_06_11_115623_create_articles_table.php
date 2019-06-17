@@ -17,9 +17,10 @@ class CreateArticlesTable extends Migration
             $table->bigIncrements('id');
 	        $table->string('title');
 	        $table->text('content');
-	        $table->string('images');
-	        $table->integer('author_id')->default(1)->nullable()->references('id')->on('users');
-	        $table->integer('caterory_id')->default(1)->nullable()->references('id')->on('categories');
+	        $table->string('slug');
+	        $table->string('images')->nullable();
+	        $table->integer('user_id')->default(1)->nullable()->references('id')->on('users');
+	        $table->integer('category_id')->default(1)->nullable()->references('id')->on('categories');
             $table->timestamps();
         });
     }

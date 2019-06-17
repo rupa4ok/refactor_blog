@@ -14,7 +14,7 @@
                         <div class="row">
                             <ul>
                                 @foreach ($categories as $category)
-                                    <li><a href="{{ route('category.index', $category) }}">{{ $category->name }}</a></li>
+                                    <li><a href="{{ route('category.show', $category->slug) }}">{{ $category->name }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -31,6 +31,20 @@
                             <span class="pull-right"><a href="/">Назад к списку категорий -></a></span>
                         </div>
                     </div>
+                    <div class="card card-default">
+                        <div class="card-header">
+                            Подкатегории
+                        </div>
+                        <div class="card-body pb-0" style="color: #aaa">
+                            <div class="row">
+                                <ul>
+                                    @foreach ($subCategory as $item)
+                                        <li><a href="/{{ $category }}/{{ $item->slug }}">{{ $item->name }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         @endif
@@ -45,10 +59,11 @@
                         <div class="row">
                             <ul>
                                 @foreach ($articles as $article)
-                                    <li><a href="">{{ $article->name }}</a></li>
+                                    <li><a href="{{ route('category.show', $article->title) }}">{{ $article->title }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
+                        {{ $articles->links() }}
                     </div>
                 </div>
             </div>
